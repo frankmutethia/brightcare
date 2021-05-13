@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "748092448394",
+    "project_id": "bright-care-b3863",
+    "storage_bucket": "bright-care-b3863.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748092448394:android:682d7a37db1d1d9416d773",
+        "android_client_info": {
+          "package_name": "com.example.bright_care"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748092448394-3f8vjcbg8a9dicglnj67994kjrtqe3ti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKJ9E8J2FJTFY6ew0ompXVHMYy7BrbbXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748092448394-3f8vjcbg8a9dicglnj67994kjrtqe3ti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
