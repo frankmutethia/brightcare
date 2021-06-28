@@ -1,3 +1,4 @@
+import 'package:bright_care/google_maps.dart';
 import 'package:bright_care/home_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -196,11 +197,11 @@ class _RelaxCenterOneState extends State<RelaxCenterOne> {
                     child: GestureDetector(
                       onTap: () {
                         // Navigator.pushNamed(context, MyHomePage.id);
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (BuildContext context) =>
-                        //             MyHomePage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    MyHomePage()));
                       },
                       child: Column(
                         children: <Widget>[
@@ -734,7 +735,7 @@ class _RelaxCenterOneState extends State<RelaxCenterOne> {
   }
 
   _payment() async {
-    await InAppPayments.setSquareApplicationId('sq0idp-kX6Ph1lswQvG32zYw174iQ');
+    await InAppPayments.setSquareApplicationId('sq0idp-kX6Ph1lswQvG32zYw174iQ');//the key here is for the stripe payment services
     await InAppPayments.startCardEntryFlow(
         onCardNonceRequestSuccess: (CardDetails result) {
           try {

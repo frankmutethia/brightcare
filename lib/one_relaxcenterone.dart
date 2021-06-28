@@ -1,3 +1,4 @@
+import 'package:bright_care/google_maps.dart';
 import 'package:bright_care/home_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -196,11 +197,11 @@ class _OneRelaxCenterOneState extends State<OneRelaxCenterOne> {
                     child: GestureDetector(
                       onTap: () {
                         // Navigator.pushNamed(context, MyHomePage.id);
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (BuildContext context) =>
-                        //             MyHomePage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    MyHomePage()));
                       },
                       child: Column(
                         children: <Widget>[

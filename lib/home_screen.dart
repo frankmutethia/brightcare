@@ -1,14 +1,10 @@
+import 'package:bright_care/chatservices/auth.dart';
+import 'package:bright_care/google_maps.dart';
 import 'package:bright_care/places.dart';
 import 'package:bright_care/placesone.dart';
 import 'package:bright_care/services/auth_services.dart';
+import 'package:bright_care/views/chat_room.dart';
 import 'package:flutter/material.dart';
-
-//import 'package:powers/screens/destination_carouselone.dart';
-// //import 'package:msafiri/screens/hotel_carousel.dart';
-// import 'package:msafiri/screens/settings_screen.dart';
-// import 'package:msafiri/services/auth_services.dart';
-
-//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   static final String id = "homescreen";
@@ -74,28 +70,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(),
                   ),
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (BuildContext context) => MyHomePage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => MyHomePage()));
                   },
                 ),
                 SizedBox(
                   height: 2.0,
                 ),
-                // ListTile(
-                //   leading: Icon(Icons.car_rental),
-                //   title: Text(
-                //     "Car Hire",
-                //     style: TextStyle(),
-                //   ),
-                //   onTap: () {
-                //     // Navigator.push(
-                //     //     context,
-                //     //     MaterialPageRoute(
-                //     //         builder: (BuildContext context) => Showroom()));
-                //   },
-                // ),
+                ListTile(
+                  leading: Icon(Icons.car_rental),
+                  title: Text(
+                    "Car Hire",
+                    style: TextStyle(),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => ChatRoom()));
+                  },
+                ),
                 SizedBox(
                   height: 2.0,
                 ),
@@ -125,7 +121,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   leading: Icon(Icons.exit_to_app),
                   title: Text('Logout'),
                   onTap: () {
-                    AuthService.logout(context);
+                    AuthService().signOut();
+                    // AuthService.logout(context);
                   },
                 )
               ],
