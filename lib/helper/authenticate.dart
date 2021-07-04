@@ -1,5 +1,6 @@
 // import 'package:chatapp/views/signin.dart';
 // import 'package:chatapp/views/signup.dart';
+import 'package:bright_care/splash_screen.dart';
 import 'package:bright_care/views/signin.dart';
 import 'package:bright_care/views/signup.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +21,11 @@ class _AuthenticateState extends State<Authenticate> {
 
   @override
   Widget build(BuildContext context) {
-    if (showSignIn) {
-      return SignIn(toggleView);
-    } else {
-      return SignUp(toggleView);
-    }
+    return SplashScreen(toggleView);
+    // if (showSignIn) {
+    //   return SignIn(toggleView);
+    // } else {
+    //   return SplashScreen(toggleView);
+    // }
   }
 }

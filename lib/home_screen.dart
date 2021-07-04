@@ -2,8 +2,8 @@ import 'package:bright_care/chatservices/auth.dart';
 import 'package:bright_care/google_maps.dart';
 import 'package:bright_care/places.dart';
 import 'package:bright_care/placesone.dart';
-import 'package:bright_care/services/auth_services.dart';
-import 'package:bright_care/views/chat_room.dart';
+// import 'package:bright_care/services/auth_services.dart';
+// import 'package:bright_care/views/chat_room.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -34,101 +34,101 @@ class _HomeScreenState extends State<HomeScreen> {
         //     BottomNavigationBarItem(icon: Icon(Icons.send), title: Text("Hey")),
         //   ],
         // ),
-        drawer: Container(
-          color: Colors.orange,
-          child: Drawer(
-            child: Column(
-              children: <Widget>[
-                UserAccountsDrawerHeader(
-                  accountName: Text(
-                    "Name: ${args['name']}",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  accountEmail: Text(
-                    "Email: ${args['email']}",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  currentAccountPicture: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      "https://picsum.photos/200",
+        // drawer: Container(
+        //   color: Colors.orange,
+        //   child: Drawer(
+        //     child: Column(
+        //       children: <Widget>[
+        //         UserAccountsDrawerHeader(
+        //           accountName: Text(
+        //             "Name: ${args['name']}",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //           accountEmail: Text(
+        //             "Email: ${args['email']}",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //           currentAccountPicture: CircleAvatar(
+        //             backgroundImage: NetworkImage(
+        //               "https://picsum.photos/200",
 
-                      // userInfo.profilePic
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 2.0,
-                ),
-                ListTile(
-                  leading: Icon(Icons.map),
-                  title: Text(
-                    'Guide Maps',
-                    style: TextStyle(),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) => MyHomePage()));
-                  },
-                ),
-                SizedBox(
-                  height: 2.0,
-                ),
-                ListTile(
-                  leading: Icon(Icons.car_rental),
-                  title: Text(
-                    "Car Hire",
-                    style: TextStyle(),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) => ChatRoom()));
-                  },
-                ),
-                SizedBox(
-                  height: 2.0,
-                ),
-                Divider(),
-                SizedBox(
-                  height: 2.0,
-                ),
-                ListTile(
-                  leading: Icon(Icons.card_membership),
-                  title: Text('Blog'),
-                  onTap: () {
-                    // Navigator.pushNamed(context, HomeScreen.id);
-                  },
-                ),
-                SizedBox(
-                  height: 2.0,
-                ),
-                ListTile(
-                  leading: Icon(Icons.help),
-                  title: Text('Help'),
-                  onTap: () {},
-                ),
-                SizedBox(
-                  height: 2.0,
-                ),
-                ListTile(
-                  leading: Icon(Icons.exit_to_app),
-                  title: Text('Logout'),
-                  onTap: () {
-                    AuthService().signOut();
-                    // AuthService.logout(context);
-                  },
-                )
-              ],
-            ),
-          ),
-        ),
+        //               // userInfo.profilePic
+        //             ),
+        //           ),
+        //         ),
+        //         SizedBox(
+        //           height: 2.0,
+        //         ),
+        //         ListTile(
+        //           leading: Icon(Icons.map),
+        //           title: Text(
+        //             'Guide Maps',
+        //             style: TextStyle(),
+        //           ),
+        //           onTap: () {
+        //             Navigator.push(
+        //                 context,
+        //                 MaterialPageRoute(
+        //                     builder: (BuildContext context) => MyHomePage()));
+        //           },
+        //         ),
+        //         SizedBox(
+        //           height: 2.0,
+        //         ),
+        //         ListTile(
+        //           leading: Icon(Icons.car_rental),
+        //           title: Text(
+        //             "Car Hire",
+        //             style: TextStyle(),
+        //           ),
+        //           onTap: () {
+        //             Navigator.push(
+        //                 context,
+        //                 MaterialPageRoute(
+        //                     builder: (BuildContext context) => ChatRoom()));
+        //           },
+        //         ),
+        //         SizedBox(
+        //           height: 2.0,
+        //         ),
+        //         Divider(),
+        //         SizedBox(
+        //           height: 2.0,
+        //         ),
+        //         ListTile(
+        //           leading: Icon(Icons.card_membership),
+        //           title: Text('Blog'),
+        //           onTap: () {
+        //             // Navigator.pushNamed(context, HomeScreen.id);
+        //           },
+        //         ),
+        //         SizedBox(
+        //           height: 2.0,
+        //         ),
+        //         ListTile(
+        //           leading: Icon(Icons.help),
+        //           title: Text('Help'),
+        //           onTap: () {},
+        //         ),
+        //         SizedBox(
+        //           height: 2.0,
+        //         ),
+        //         ListTile(
+        //           leading: Icon(Icons.exit_to_app),
+        //           title: Text('Logout'),
+        //           onTap: () {
+        //             AuthService().signOut();
+        //             // AuthService.logout(context);
+        //           },
+        //         )
+        //       ],
+        //     ),
+        //   ),
+        // ),
         body: SafeArea(
           child: ListView(
             // physics:

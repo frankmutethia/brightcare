@@ -1,11 +1,11 @@
-// import 'package:chatapp/models/user.dart';
-// import 'package:chatapp/views/chat.dart';
-// import 'package:bright_care/models/userInfo.dart';
 import 'package:bright_care/chatmodels/user.dart';
 import 'package:bright_care/views/chat.dart';
+import 'package:bright_care/views/chat_room.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;

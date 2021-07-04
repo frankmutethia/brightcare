@@ -2,13 +2,8 @@ import 'package:bright_care/google_maps.dart';
 import 'package:bright_care/home_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-// import 'package:msafiri/screens/booking.dart';
-// import 'package:msafiri/screens/travel_screen.dart';
-//import 'package:square_in_app_payments/in_app_payments.dart';
-// import 'package:msafiri/screens/google_maps.dart';
 import 'package:square_in_app_payments/in_app_payments.dart';
 import 'package:square_in_app_payments/models.dart';
-//import 'package:flutter_markdown/flutter_markdown.dart';
 
 class RelaxCenter extends StatefulWidget {
   static final String id = "relaxcenter";

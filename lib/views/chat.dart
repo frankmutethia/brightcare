@@ -1,7 +1,4 @@
 import 'dart:io';
-// import 'package:chatapp/helper/constants.dart';
-// import 'package:chatapp/services/database.dart';
-// import 'package:chatapp/widget/widget.dart';
 import 'package:bright_care/chatservices/database.dart';
 import 'package:bright_care/helper/constants.dart';
 import 'package:bright_care/widget/widget.dart';
@@ -69,7 +66,10 @@ class _ChatState extends State<Chat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarMain(context),
+      backgroundColor: Colors.yellow,
+      appBar: AppBar(
+        title: Text("Chats"),
+      ),
       body: Container(
         child: Stack(
           children: [
@@ -89,7 +89,7 @@ class _ChatState extends State<Chat> {
                       decoration: InputDecoration(
                           hintText: "Message ...",
                           hintStyle: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 16,
                           ),
                           border: InputBorder.none),
@@ -165,7 +165,7 @@ class MessageTile extends StatelessWidget {
         child: Text(message,
             textAlign: TextAlign.start,
             style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 16,
                 fontFamily: 'OverpassRegular',
                 fontWeight: FontWeight.w300)),

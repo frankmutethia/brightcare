@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:geocoder/geocoder.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+// the geolocator functionality only works after placing the billing account
 class MyHomePage extends StatefulWidget {
   static final String id = "maps";
   @override

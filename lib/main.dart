@@ -1,16 +1,18 @@
 import 'package:bright_care/getting_started_screen.dart';
 import 'package:bright_care/home_screen.dart';
-import 'package:bright_care/login_screen.dart';
+// import 'package:bright_care/login_screen.dart';
 import 'package:bright_care/one_relaxcenter.dart';
 import 'package:bright_care/one_relaxcenterone.dart';
 import 'package:bright_care/relax_center.dart';
 import 'package:bright_care/relaxcenter_one.dart';
 import 'package:bright_care/relaxcenter_two.dart';
-import 'package:bright_care/services/auth_services.dart';
-import 'package:bright_care/signup_screen.dart';
+// import 'package:bright_care/services/auth_services.dart';
+// import 'package:bright_care/signup_screen.dart';
 import 'package:bright_care/splash_screen.dart';
 import 'package:bright_care/two_relaxcentertwo.dart';
 import 'package:bright_care/views/chat_room.dart';
+import 'package:bright_care/views/signin.dart';
+import 'package:bright_care/views/signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:bright_care/helper/authenticate.dart';
@@ -50,16 +52,16 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.purple,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        // visualDensity: VisualDensity.adaptivePlatformDensity,
         // primaryColor: Color(0xff145C9E),
         // scaffoldBackgroundColor: Color(0xff1F1F1F),
         // accentColor: Color(0xff007EF4),
-        // fontFamily: "OverpassRegular",
-        // visualDensity: VisualDensity.adaptivePlatformDensity,
+        fontFamily: "OverpassRegular",
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: userIsLoggedIn != null
           ? userIsLoggedIn
-              ? HomeScreen()
+              ? ChatRoom()
               : Authenticate()
           : Container(
               child: Center(
@@ -67,9 +69,9 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
       routes: {
-        // GettingStartedScreen.id: (context) => GettingStartedScreen(),
-        // LoginScreen.id: (context) => LoginScreen(),
-        // SignUpScreen.id: (context) => SignUpScreen(),
+        GettingStartedScreen.id: (context) => GettingStartedScreen(),
+        SignIn.id: (context) => SignIn(),
+        SignUp.id: (context) => SignUp(),
         HomeScreen.id: (context) => HomeScreen(),
         RelaxCenter.id: (context) => RelaxCenter(),
         RelaxCenterOne.id: (context) => RelaxCenterOne(),
